@@ -1,0 +1,15 @@
+{
+  "name": "step-by-step-crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Step-by-Step-Web-Study/step-by-step-crawler.git",
+  "author": "jungmin.sung <ivsinji746@naver.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
