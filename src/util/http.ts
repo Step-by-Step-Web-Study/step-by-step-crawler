@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
-const timeout = 30000
+const timeout = 90000
 
 const axiosConfig: AxiosRequestConfig = {
   timeout,

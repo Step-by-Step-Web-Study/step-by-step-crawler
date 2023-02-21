@@ -13,11 +13,14 @@ class RdsDB extends DBParent {
 
       await connection.connect()
       await connection.beginTransaction()
+      console.log('TRUNCATE Start')
       await connection.query('TRUNCATE TABLE company_info')
+      console.log('TRUNCATE End')
       const queries =
         'INSERT INTO company_info (No, company_name, title, content, salary, contract, intake, educational_background, recruitment_process, working_conditions, reg_date, end_date) VALUES ?'
-
+      console.log('Query Start')
       await connection.query(queries, [updateFileds])
+      console.log('Query End')
       await connection.commit()
     } catch (e: any) {
       console.error(e)

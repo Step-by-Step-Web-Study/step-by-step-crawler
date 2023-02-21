@@ -1,7 +1,9 @@
+import dotenv from 'dotenv'
 import cron from 'node-cron'
 import Cralwer from './component/crawler/crawler'
 import RdsDB from './component/db/rdsDB'
 import UpdateRobot from './component/updateRobot'
+dotenv.config()
 
 const robot = new UpdateRobot(new Cralwer(), new RdsDB())
 
