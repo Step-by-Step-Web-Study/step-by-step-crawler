@@ -4,13 +4,14 @@ import http from '../../util/http'
 import CralwerParent from './cralwerParent'
 
 class Cralwer extends CralwerParent {
-  paginCount: number = 5000
+  paginCount: number = 1000
   async doCrawling(): Promise<RecruitInfo[]> {
     console.log(`Fetch Start`)
     let pageIndex = 1
     let res: RecruitInfo[] = []
     while (true) {
       try {
+        console.log(`Start Count ${pageIndex}`)
         const eachRes = await http.get<EmploymentResDTO>(OPEN_API_URL, {
           params: {
             numOfRows: this.paginCount,
